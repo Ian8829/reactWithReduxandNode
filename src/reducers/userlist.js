@@ -8,24 +8,23 @@ const initialState = {
   usersById: {
     1: {
       id: 1,
-      name: 'Harmeet Singh'
+      name: 'Harmeet'
     },
     2: {
       id: 2,
-      name: 'Mehul Bhatt'
+      name: 'Mehul'
     },
     3: {
       id: 3,
-      name: 'NayanJyoti Talukdar'
-    }
+      name: 'Simon'
+    },
   }
 };
 
 export default function users(state = initialState, action) {
   switch (action.type) {
-
     case types.ADD_USER:
-      const newId = state.users[state.users.length-1] + 1;
+      const newId = state.users[state.users.length - 1] + 1;
       return {
         ...state,
         users: state.users.concat(newId),
@@ -33,18 +32,16 @@ export default function users(state = initialState, action) {
           ...state.usersById,
           [newId]: {
             id: newId,
-            name: action.name
+            name: action.type
           }
-        },
-      }
-
+        }
+      };
     case types.DELETE_USER:
       return {
         ...state,
         users: state.users.filter(id => id !== action.id),
         usersById: omit(state.usersById, action.id)
-      }
-
+      };
     default:
       return state;
   }

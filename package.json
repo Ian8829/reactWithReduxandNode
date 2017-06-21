@@ -2,7 +2,7 @@
   "name": "React-redux-example",
   "version": "1.0.0",
   "babel": {
-    "stage":0
+    "stage": 0
   },
   "description": "Using Redux architecture add the user in the list and delete",
   "scripts": {
@@ -16,7 +16,7 @@
   "keywords": [
     "react",
     "reactjs",
-	"redux",
+    "redux",
     "hot",
     "reload",
     "live",

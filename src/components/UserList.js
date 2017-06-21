@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import mapValues from 'lodash/object/mapValues';
-import UserListItem from './UsersListItem';
+import UsersListItem from './UsersListItem';
 
 export default class UserList extends Component {
   static propTypes = {
@@ -13,7 +13,7 @@ export default class UserList extends Component {
       <div className="media">
         {
           mapValues(this.props.users, users => {
-            return (<UserListItem
+            return (<UsersListItem
               id={users.id}
               name={users.name}
               src={users.src}

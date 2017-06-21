@@ -32,7 +32,7 @@ export default function users(state = initialState, action) {
           ...state.usersById,
           [newId]: {
             id: newId,
-            name: action.type
+            name: action.name
           }
         }
       };

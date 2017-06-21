@@ -7,7 +7,7 @@ export default class UserListItem extends Component {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     onTrashClick: PropTypes.func.isRequired
-  }
+  };
 
   render () {
     return (

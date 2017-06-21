@@ -4,10 +4,10 @@ import classnames from 'classnames';
 export default class AddUserInput extends Component {
   static propTypes = {
     addUser: PropTypes.func.isRequired
-  }
+  };
 
-  render () {
-    return (
+  render() {
+    return(
       <input
         type="text"
         autoFocus="true"
@@ -15,7 +15,8 @@ export default class AddUserInput extends Component {
         placeholder="Type the name of the user to add"
         value={this.state.name}
         onChange={this.handleChange.bind(this)}
-        onKeyDown={this.handleSubmit.bind(this)} />
+        onKeyDown={this.handleSubmit.bind(this)}
+      />
     );
   }
 
@@ -28,7 +29,7 @@ export default class AddUserInput extends Component {
 
   handleChange (e) {
     this.setState({ name: e.target.value });
-  }
+  };
 
   handleSubmit (e) {
     const name = e.target.value.trim();
@@ -36,6 +37,7 @@ export default class AddUserInput extends Component {
       this.props.addUser(name);
       this.setState({ name: '' });
     }
-  }
+  };
 
 }
+

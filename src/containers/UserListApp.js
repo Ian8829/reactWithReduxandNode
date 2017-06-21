@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as UserActions from '../actions/UsersActions';
+import * as UsersActions from '../actions/UsersActions';
 import { UserList, AddUserInput } from '../components';
 
 const initialState = {
@@ -36,7 +36,7 @@ export default class UserListApp extends Component {
 
   render() {
     const { userlist: {usersById}, dispatch } = this.props;
-    const actions = bindActionCreators(UserActions, dispatch);
+    const actions = bindActionCreators(UsersActions, dispatch);
 
     return(
       <div>
